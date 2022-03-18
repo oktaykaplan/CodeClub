@@ -2,7 +2,7 @@
 
 We launched a weekly Code Club in the lab since it is crucial for trainees to gain skills to display their data and do statistical analysis.
 
-This is an R-focused coding club, and We will introduce data manipulations and data visualization to participants in the Code club. We will explain the many forms of data (Numeric, Integers, Complex, Logical, and Characters) as well as how to construct a data structure or read a file (read.delim, read.csv, fread, read.table etc). Participants will be shown a variety of data manipulation functions such as ilter(), distinct(), arrange(), select(), rename(), mutate() and transmutate(), inner join (), left join(), and so on.
+This is an R-focused coding club, and we will introduce data manipulations and data visualization to participants in the Code club. We will explain the many forms of data (Numeric, Integers, Complex, Logical, and Characters) as well as how to construct a data structure or read a file (read.delim, read.csv, fread, read.table etc). Participants will be shown a variety of data manipulation functions such as filter(), distinct(), arrange(), select(), rename(), mutate() and transmutate(), inner_join (), left_join(), and so on.
 
 
 We'll demonstrate to participants in the Code club how to use ggplot and heatmap to create customized bar plots and heatmaps. Bar charts are a popular visualization tool for displaying categorical variables with numbers. Each category variable is depicted as a bar based on the data associated with it. 
