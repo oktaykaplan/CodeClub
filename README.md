@@ -1,4 +1,5 @@
-**Wellcome the Code Club**
+  **Welcome to Code Club
+**
 
 We launched a weekly Code Club in the lab since it is crucial for trainees to gain skills to display their data and do statistical analysis.
 
