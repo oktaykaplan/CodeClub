@@ -54,7 +54,7 @@ plot2 <- plot1 +ggtitle("Sci-Hub Downloads") +
   ggeasy::easy_center_title()+ #center the plot title with ggeasy package
   xlab("Countries") + ylab("Number of Paper Downloads from Sci-Hub")  
 
-#Stor showing abbreviated labels (1e+ 07 numbers) in the axis
+#Stop showing abbreviated labels (1e+ 07 numbers) in the axis
 plot2 + scale_y_continuous(labels = function(x) format(x, scientific = FALSE))
 
 ###################################################################
