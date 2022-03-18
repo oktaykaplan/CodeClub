@@ -1,4 +1,4 @@
-#CodeClub
+**Wellcome the Code Club**
 
 We launched a weekly Code Club in the lab since it is crucial for trainees to gain skills to display their data and do statistical analysis.
 
@@ -7,7 +7,7 @@ using data from Sci-Hub downloads.
 
 
 
-
+https://github.com/oktaykaplan/CodeClub/blob/main/Turkey_downloads.png
 
 
 Bar charts are a popular visualization tool for displaying categorical variables with numbers. 
