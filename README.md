@@ -5,14 +5,20 @@ We launched a weekly Code Club in the lab since it is crucial for trainees to ga
 This is an R-focused coding club, and we'll demonstrate participants in the Code club how to use ggplot to create a customized bar plot 
 using data from Sci-Hub downloads. 
 
-
-The orignal data used for generaring customized barplot was downloaded from Sci-Hub on 17.03.2022
-
-https://github.com/oktaykaplan/CodeClub/blob/main/Turkey_downloads.png
-
-
 Bar charts are a popular visualization tool for displaying categorical variables with numbers. 
 Each category variable is depicted as a bar based on the data associated with it. 
+
+
+The original data required to create the customized barplot was retrieved from Sci-Hub on 17.03.2022,
+
+Here is the  customized barplot 
+
+[Turkey_downloads](https://user-images.githubusercontent.com/12661265/158945764-f131bfc2-6b28-41e4-9fc4-a7792c739aa8.png)
+
+
+
+
+
 
 
 
