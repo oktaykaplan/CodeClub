@@ -10,7 +10,7 @@ We'll demonstrate to participants in the Code club how to use ggplot and heatmap
 
 **An example customized plot from the Code Club is shown below**
 
-The original data required to create the customized barplot was retrieved from Sci-Hub on 17.03.2022. We used read.table to read the file and manipulate the data using filter() and group_by. We next ggplot to generate a customized barplot. 
+The original data required to create the customized barplot was retrieved from Sci-Hub on 17.03.2022. We used read.table to read the file and manipulate the data using filter() and group_by. We next utilized ggplot to generate a customized barplot. 
 
 
 ![Turkey_downloads](https://user-images.githubusercontent.com/12661265/158946046-d4e025b5-5a24-4bc0-a965-6dcbcf1df47f.png)
