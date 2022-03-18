@@ -6,6 +6,7 @@ This is an R-focused coding club, and we'll demonstrate participants in the Code
 using data from Sci-Hub downloads. 
 
 
+The orignal data used for generaring customized barplot was downloaded from Sci-Hub on 17.03.2022
 
 https://github.com/oktaykaplan/CodeClub/blob/main/Turkey_downloads.png
 
