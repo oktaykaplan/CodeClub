@@ -2,19 +2,15 @@
 
 We launched a weekly Code Club in the lab since it is crucial for trainees to gain skills to display their data and do statistical analysis.
 
-This is an R-focused coding club, and we'll demonstrate to participants in the Code club how to use ggplot to create a customized bar plot 
-using data from Sci-Hub downloads. 
-
-Bar charts are a popular visualization tool for displaying categorical variables with numbers.
-
-Each category variable is depicted as a bar based on the data associated with it. 
+This is an R-focused coding club, and We will introduce data manipulations and data visualization to participants in the Code club. We will explain the many forms of data (Numeric, Integers, Complex, Logical, and Characters) as well as how to construct a data structure or read a file (read.delim, read.csv, fread, read.table etc). Participants will be shown a variety of data manipulation functions such as ilter(), distinct(), arrange(), select(), rename(), mutate() and transmutate(), inner join (), left join(), and so on.
 
 
-The original data required to create the customized barplot was retrieved from Sci-Hub on 17.03.2022,
+We'll demonstrate to participants in the Code club how to use ggplot and heatmap to create customized bar plots and heatmaps. Bar charts are a popular visualization tool for displaying categorical variables with numbers. Each category variable is depicted as a bar based on the data associated with it. 
+
+
+The original data required to create the customized barplot was retrieved from Sci-Hub on 17.03.2022. 
 
 Here is the  customized barplot 
-
-
 
 ![Turkey_downloads](https://user-images.githubusercontent.com/12661265/158946046-d4e025b5-5a24-4bc0-a965-6dcbcf1df47f.png)
 
