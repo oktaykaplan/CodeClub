@@ -4,6 +4,10 @@ library(dplyr)
 library(colorspace)
 library(ggeasy)
 
+#Download the file from the link
+download.file("https://sci-hub.se/datasets/country%20downloads%20per%20month/2022-03-17.tab", "/Desktop/2022-03-17.tab")
+
+
 #read the data downloaded from Sci-hub on 17.03.2022
 sci_hub_data <- read.table("2022-03-17.tab", header = F, sep = "\t", fill = TRUE)
 colnames(sci_hub_data) <- c('Countries','Number_of_Downloads') #add column names
