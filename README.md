@@ -8,6 +8,11 @@ This is an R-focused coding club, and we will introduce data manipulations and d
 We'll demonstrate to participants in the Code club how to use ggplot and heatmap to create customized bar plots and heatmaps. Bar charts are a popular visualization tool for displaying categorical variables with numbers. Each category variable is depicted as a bar based on the data associated with it. 
 
 
+**Animations created with gganimate display a number of SARS-CoV-2 genomic RNA sequences submitted to NCBI by countries.**
+
+![covid-19_variant](https://user-images.githubusercontent.com/12661265/160349923-d7bd0deb-69e4-4545-a5b5-163c969e03d0.gif)
+
+
 **An example customized plot from the Code Club is shown below**
 
 The original data required to create the customized barplot was retrieved from Sci-Hub on 17.03.2022. We used read.table to read the file and manipulate the data using filter() and group_by. We next utilized ggplot to generate a customized barplot. 
