@@ -73,9 +73,19 @@ rownames(annotcolor)<-colnames(muscle_new)
 annot_color <-list(
   `Cell types` = c(`Non-Muscle cells` = "deepskyblue", `Muscle cells` = "coral3")
 )
-
 ```
 
+**Generate the heatmap** 
+
+```
+pheatmap(muscle_new, cluster_cols = FALSE, cluster_rows = FALSE, show_rownames = TRUE, 
+         fontsize_row = 7, scale = "row", angle_col = 315, 
+         annotation_col = annotcolor, annotation_names_row = FALSE, 
+         annotation_names_col = FALSE,
+         annotation_colors = annot_color)
+```
+
+![Rplot](https://user-images.githubusercontent.com/12661265/161766453-9479db47-1a30-4008-98c9-e23adb5a9826.png)
 
 
 
