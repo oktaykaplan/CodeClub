@@ -10,7 +10,7 @@ We'll demonstrate to participants in the Code club how to use ggplot and heatmap
 
 To generate a heatmap with single-cell RNA-seq data (filtered). Following the installation of the required packages, using the library(name of package) function, each package can be loaded into RStudio and used.
 
-**Load the packages**
+**Load the following packages**
 
 
 ```
@@ -20,6 +20,64 @@ library(pheatmap)
 library(RColorBrewer)
 
 ```
+
+
+**Read the csv file**
+
+```
+df<-fread("./Single_cell_paper_master/data/C_elegans_single_cell.csv")
+```
+
+**Rename the column name that would cause us problems in the next steps.**
+
+```
+df <- rename(df, Intestinal_rectal_muscle = `Intestinal/rectal_muscle`) #rename the colunm name
+
+colnames(df)[22]<-"flp_1_interneurons" 
+colnames(df)
+```
+
+
+**Filter data**
+
+```
+muscle <- df %>%
+  filter_all(all_vars(. > 15))%>%
+  dplyr::filter(Body_wall_muscle > 250 & Intestinal_rectal_muscle> 250)%>%
+  na.omit() %>% #Omit if there NA
+  relocate(Body_wall_muscle, .after = Intestine) %>% #carry the Body_wall_muscle after intestine
+  relocate(Intestinal_rectal_muscle, .after = Intestine)#carry the intestinal_rectal_muscle after intestine
+```
+
+
+**Remove the first column name in a data frame and convert dataframe to a matrix**
+
+```
+
+muscle <-muscle[,-1] #remove the first column
+muscle1<-muscle[,-1] #remove the first column
+muscle_new <-as.matrix(muscle1) #make a matrix for heatmap
+rownames(muscle_new)<-muscle$symbol #add gene names
+
+```
+**Make annotations  for column names and assign colors to them**
+
+```
+mypalette<-brewer.pal(7,"Blues")
+
+annotcolor <-data.frame("Cell types" = factor(rep(c("Non-Muscle cells", "Muscle cells"), c(25, 2))))
+colnames(annotcolor)<-"Cell types"
+rownames(annotcolor)<-colnames(muscle_new)
+
+
+annot_color <-list(
+  `Cell types` = c(`Non-Muscle cells` = "deepskyblue", `Muscle cells` = "coral3")
+)
+
+```
+
+
+
 
 **Animations created with gganimate display a number of SARS-CoV-2 genomic RNA sequences (2021) submitted to NCBI by countries.**
 
