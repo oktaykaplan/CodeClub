@@ -60,8 +60,6 @@ rownames(muscle_new)<-muscle$symbol #add gene names
 **Make annotations  for column names and assign colors to them**
 
 ```
-mypalette<-brewer.pal(7,"Blues")
-
 annotcolor <-data.frame("Cell types" = factor(rep(c("Non-Muscle cells", "Muscle cells"), c(25, 2))))
 colnames(annotcolor)<-"Cell types"
 rownames(annotcolor)<-colnames(muscle_new)
