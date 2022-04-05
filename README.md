@@ -53,12 +53,10 @@ muscle <- df %>%
 **Remove the first column name in a data frame and convert dataframe to a matrix**
 
 ```
-
 muscle <-muscle[,-1] #remove the first column
 muscle1<-muscle[,-1] #remove the first column
 muscle_new <-as.matrix(muscle1) #make a matrix for heatmap
 rownames(muscle_new)<-muscle$symbol #add gene names
-
 ```
 **Make annotations  for column names and assign colors to them**
 
