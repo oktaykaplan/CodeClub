@@ -8,7 +8,7 @@ This is an R-focused coding club, and we will introduce data manipulations and d
 We'll demonstrate to participants in the Code club how to use ggplot and heatmap to create customized bar plots and heatmaps. Bar charts are a popular visualization tool for displaying categorical variables with numbers. Each category variable is depicted as a bar based on the data associated with it. 
 
 
-To generate a heatmap with single-cell RNA-seq data (filtered). Following the installation of the required packages, using the library(name of package) function, each package can be loaded into RStudio and used.
+Generate a heatmap with single-cell RNA-seq data (filtered). Following the installation of the required packages, using the library(name of package) function, each package can be loaded into RStudio and used.
 
 **Load the following packages**
 
