@@ -24,7 +24,7 @@ library(RColorBrewer)
 **Read the csv file**
 
 ```
-df<-fread("./Single_cell_paper_master/data/C_elegans_single_cell.csv")
+df<-fread("./Single_cell_paper/data/C_elegans_single_cell.csv")
 ```
 
 **Rename the column name that would cause us problems in the next steps.**
