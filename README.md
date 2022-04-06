@@ -43,7 +43,6 @@ colnames(df)
 muscle <- df %>%
   filter_all(all_vars(. > 15))%>%
   dplyr::filter(Body_wall_muscle > 250 & Intestinal_rectal_muscle> 250)%>%
-  na.omit() %>% #Omit if there NA
   relocate(Body_wall_muscle, .after = Intestine) %>% #carry the Body_wall_muscle after intestine
   relocate(Intestinal_rectal_muscle, .after = Intestine)#carry the intestinal_rectal_muscle after intestine
 ```
