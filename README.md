@@ -100,8 +100,6 @@ The original data required to create the customized barplot was retrieved from S
 
 
 
-Use of strings
-
 
 
 **Use of stringr package** 
@@ -115,6 +113,7 @@ data_subset <- data.frame(
   Organism = c("S. cerevisiae", "A. thaliana", "S. cerevisiae", "M. musculus", "T. gondii", "M. musculus", "H. sapiens", "T. gondii", "T. gondii", "M. musculus", "A. thaliana", "H. sapiens", "M. musculus")
 )
 ```
+
 
 **Select the specific columns* 
 
@@ -146,9 +145,10 @@ data_subset_new <- data_subset %>%
 ```
 
 
+**Split the AA1 column into three different columns**
+
 ```
 > library(stringr)
-#Split the AA1 column into three different columns. 
 data_subset_new_splt <- data_subset_new %>%
   mutate(Original = str_extract(AA1, "[A-Z]"),
          Position = as.numeric(str_extract(AA1, "\\d+")),
