@@ -182,5 +182,15 @@ data_subset_new_splt
 library(dplyr)
 df_new_filtered <- data_subset_new_splt %>%
   filter(Organism %in% c("S. cerevisiae", "H. sapiens", "M. musculus"))
-df_new_filtered
+>df_new_filtered
+   AA1      AA3         Tubulin_isoform      Organism Original Position Change
+1  R2A  Arg2Ala              AAA35180.1 S. cerevisiae        R        2      R
+2  E3A  Glu3Ala              AAA35180.1 S. cerevisiae        E        3      E
+3  I4V  Ile4Val NP_001300652.1 (Tuba4a)   M. musculus        I        4      I
+4  I5F  Ile5Phe    NP_035783.1 (Tuba1a)   M. musculus        I        5      I
+5  I5L  Ile5Leu NP_001257328.1 (TUBA1A)    H. sapiens        I        5      I
+6  V9M  Val9Met    NP_033472.1 (Tuba3a)   M. musculus        V        9      V
+7 S12A Ser12Ala NP_001257328.1 (TUBA1A)    H. sapiens        S       12      S
+8 V14I Val14Ile    NP_033475.1 (Tuba3b)   M. musculus        V       14      V
+> 
 ```
