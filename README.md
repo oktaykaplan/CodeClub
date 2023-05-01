@@ -115,7 +115,7 @@ data_subset <- data.frame(
 ```
 
 
-**Select the specific columns* 
+**Select the specific columns**
 
 ```
 library(dplyr)
@@ -124,7 +124,7 @@ data_subset_new <- data_subset %>%
 ```
 
 
-**Visuaalize the data** 
+**Visualize the data**
 
 ```
 > data_subset
