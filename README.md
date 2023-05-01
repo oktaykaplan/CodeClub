@@ -100,4 +100,87 @@ The original data required to create the customized barplot was retrieved from S
 
 
 
+Use of strings
 
+
+
+**Use of stringr package** 
+
+```
+# Create a data frame
+data_subset <- data.frame(
+  AA1 = c("R2A", "R2K", "E3A", "I4V", "V4L", "I5F", "I5L", "S6I", "H8Y", "V9M", "A12V", "S12A", "V14I"),
+  AA3 = c("Arg2Ala", "Arg2Lys", "Glu3Ala", "Ile4Val", "Val4Leu", "Ile5Phe", "Ile5Leu", "Ser6Ile", "His8Tyr", "Val9Met", "Ala12Val", "Ser12Ala", "Val14Ile"),
+  Tubulin_isoform = c("AAA35180.1", "AEE27747.1 (TUA4)", "AAA35180.1", "NP_001300652.1 (Tuba4a)", "XP_002364807.1 (α1-tubulin)", "NP_035783.1 (Tuba1a)", "NP_001257328.1 (TUBA1A)", "XP_002364807.1 (α1-tubulin)", "XP_002364807.1 (α1-tubulin)", "NP_033472.1 (Tuba3a)", "AEE27747.1 (TUA4)", "NP_001257328.1 (TUBA1A)", "NP_033475.1 (Tuba3b)"),
+  Organism = c("S. cerevisiae", "A. thaliana", "S. cerevisiae", "M. musculus", "T. gondii", "M. musculus", "H. sapiens", "T. gondii", "T. gondii", "M. musculus", "A. thaliana", "H. sapiens", "M. musculus")
+)
+```
+
+**Select the specific columns* 
+
+```
+library(dplyr)
+data_subset_new <- data_subset %>% 
+  select("AA1" ,"AA3", "Tubulin_isoform",  "Organism")
+```
+
+
+**Visuaalize the data** 
+
+```
+> data_subset
+    AA1      AA3             Tubulin_isoform      Organism
+1   R2A  Arg2Ala                  AAA35180.1 S. cerevisiae
+2   R2K  Arg2Lys           AEE27747.1 (TUA4)   A. thaliana
+3   E3A  Glu3Ala                  AAA35180.1 S. cerevisiae
+4   I4V  Ile4Val     NP_001300652.1 (Tuba4a)   M. musculus
+5   V4L  Val4Leu XP_002364807.1 (α1-tubulin)     T. gondii
+6   I5F  Ile5Phe        NP_035783.1 (Tuba1a)   M. musculus
+7   I5L  Ile5Leu     NP_001257328.1 (TUBA1A)    H. sapiens
+8   S6I  Ser6Ile XP_002364807.1 (α1-tubulin)     T. gondii
+9   H8Y  His8Tyr XP_002364807.1 (α1-tubulin)     T. gondii
+10  V9M  Val9Met        NP_033472.1 (Tuba3a)   M. musculus
+11 A12V Ala12Val           AEE27747.1 (TUA4)   A. thaliana
+12 S12A Ser12Ala     NP_001257328.1 (TUBA1A)    H. sapiens
+13 V14I Val14Ile        NP_033475.1 (Tuba3b)   M. musculus
+```
+
+
+```
+> library(stringr)
+#Split the AA1 column into three different columns. 
+data_subset_new_splt <- data_subset_new %>%
+  mutate(Original = str_extract(AA1, "[A-Z]"),
+         Position = as.numeric(str_extract(AA1, "\\d+")),
+         Change = str_match(AA1, "[A-Z]"))
+#View the rearranged data
+data_subset_new_splt
+```
+
+
+```
+> data_subset_new_splt
+    AA1      AA3             Tubulin_isoform      Organism Original Position Change
+1   R2A  Arg2Ala                  AAA35180.1 S. cerevisiae        R        2      R
+2   R2K  Arg2Lys           AEE27747.1 (TUA4)   A. thaliana        R        2      R
+3   E3A  Glu3Ala                  AAA35180.1 S. cerevisiae        E        3      E
+4   I4V  Ile4Val     NP_001300652.1 (Tuba4a)   M. musculus        I        4      I
+5   V4L  Val4Leu XP_002364807.1 (α1-tubulin)     T. gondii        V        4      V
+6   I5F  Ile5Phe        NP_035783.1 (Tuba1a)   M. musculus        I        5      I
+7   I5L  Ile5Leu     NP_001257328.1 (TUBA1A)    H. sapiens        I        5      I
+8   S6I  Ser6Ile XP_002364807.1 (α1-tubulin)     T. gondii        S        6      S
+9   H8Y  His8Tyr XP_002364807.1 (α1-tubulin)     T. gondii        H        8      H
+10  V9M  Val9Met        NP_033472.1 (Tuba3a)   M. musculus        V        9      V
+11 A12V Ala12Val           AEE27747.1 (TUA4)   A. thaliana        A       12      A
+12 S12A Ser12Ala     NP_001257328.1 (TUBA1A)    H. sapiens        S       12      S
+13 V14I Val14Ile        NP_033475.1 (Tuba3b)   M. musculus        V       14      V
+```
+
+**Filter rows for the desired organisms** 
+
+```
+library(dplyr)
+df_new_filtered <- data_subset_new_splt %>%
+  filter(Organism %in% c("S. cerevisiae", "H. sapiens", "M. musculus"))
+df_new_filtered
+```
